@@ -1,0 +1,36 @@
+/client-project        <- Project Folder. Naming convention is name of client,
+│			           stakeholders, company, etc.
+│
+├── data
+│   ├── /clean         <- Data that has been cleaned.
+│   ├── /processed     <- The final, canonical data sets.
+│   ├── /raw           <- The original, immutable data dump.
+│   └── /raw-ext       <- Data from third party sources.
+│
+├── docs               <- Documentation of business task, deliverables, scope of work, etc.
+│
+├── notebooks          <- Jupyter notebooks. 
+│   └── 'name'.ipynb   <- Naming convention is the creator's initials,
+│                         a short `-` delimited description, and a version number e.g.
+│                         `1.0-jl-initial-data-exploration`.
+│
+├── references         <- Data dictionaries, manuals, and all other explanatory materials.
+│
+├── reports            <- Generated analysis as HTML, PDF, etc.
+│   ├── /dashboards    <- Dashboards created to be used in reporting.
+│   └── /figures       <- Generated graphics and figures to be used in reporting.
+│
+├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
+│                         generated with `pip freeze > requirements.txt`
+│
+├── scripts            <- Source code for use in this project.
+│   ├── __init__.py    <- Makes scripts a Python module.
+│   │
+│   ├── /data          <- Scripts to extract, transform, or load data.
+│   │   └── dataset.py
+│   │
+│   └── /viz           <- Scripts to create exploratory and results oriented visualizations.
+│       └── visualize.py
+│
+├── LICENSE
+├── README.md          <- The top-level README for developers using this project.

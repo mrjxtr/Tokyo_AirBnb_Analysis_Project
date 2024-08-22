@@ -64,7 +64,7 @@ listings_clean = (
     .dropna()
 )
 print(listings_clean)
-listings_clean.tail()
+listings_clean.head()
 listings_clean.info()
 print(listings_clean.columns)
 
@@ -92,3 +92,8 @@ df_listings_cleaned = listings_clean[listings_clean["is_english"]].drop(
 )
 
 print(df_listings_cleaned)
+df_listings_cleaned
+df_listings_cleaned.info()
+
+
+# Cleaning df_neighbourhoods

@@ -80,7 +80,7 @@ def is_english(text):
 listings_clean["is_english"] = listings_clean.apply(
     lambda row: is_english(str(row.get("name", "")))
     if isinstance(row.get("name", ""), str)
-    else False and is_english(str(row.get("host_name", "")))
+    else False or is_english(str(row.get("host_name", "")))
     if isinstance(row.get("host_name", ""), str)
     else False,
     axis=1,
@@ -95,5 +95,24 @@ print(df_listings_cleaned)
 df_listings_cleaned
 df_listings_cleaned.info()
 
-
 # Cleaning df_neighbourhoods
+neighbourhoods_clean = df_neighbourhoods.copy()
+df_neighbourhoods_cleaned = neighbourhoods_clean.drop(columns="neighbourhood_group")
+
+
+print(df_listings_cleaned)
+print(df_neighbourhoods_cleaned)
+
+
+clean_data_dir = os.path.join("..", "..", "data", "clean")
+
+cleaned_listings_export_path = os.path.abspath(
+    os.path.join(script_dir, clean_data_dir, "cleaned_listings.csv")
+)
+
+cleaned_neighbourhoods_export_path = os.path.abspath(
+    os.path.join(script_dir, clean_data_dir, "cleaned_neighbourhoods.csv")
+)
+
+df_listings_cleaned.to_csv(cleaned_listings_export_path, index=False)
+df_neighbourhoods_cleaned.to_csv(cleaned_neighbourhoods_export_path, index=False)

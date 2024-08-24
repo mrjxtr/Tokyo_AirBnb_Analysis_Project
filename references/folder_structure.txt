@@ -4,8 +4,7 @@
 ├── data
 │   ├── /clean         <- Data that has been cleaned.
 │   ├── /processed     <- The final, canonical data sets.
-│   ├── /raw           <- The original, immutable data dump.
-│   └── /raw-ext       <- Data from third party sources.
+│   └── /raw           <- The original, immutable data dump.
 │
 ├── docs               <- Documentation of business task, deliverables, scope of work, etc.
 │

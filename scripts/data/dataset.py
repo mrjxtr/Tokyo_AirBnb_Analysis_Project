@@ -61,6 +61,39 @@ listings_clean = (
 listings_clean.head()
 listings_clean.info()
 
+# Replacing non-ASCII characters with blank spaces.
+listings_clean["name"] = listings_clean["name"].apply(
+    lambda x: " " if any(ord(char) > 127 for char in x) else x
+)
+listings_clean["host_name"] = listings_clean["host_name"].apply(
+    lambda x: " " if any(ord(char) > 127 for char in x) else x
+)
+
+df_listings_cleaned = listings_clean.copy()
+
+# Cleaning df_neighbourhoods
+neighbourhoods_clean = df_neighbourhoods.copy()
+df_neighbourhoods_cleaned = neighbourhoods_clean.drop(columns="neighbourhood_group")
+
+print(df_listings_cleaned)
+print(df_neighbourhoods_cleaned)
+
+# Creating directory path for export of cleaned data.
+clean_data_dir = os.path.join("..", "..", "data", "clean")
+
+cleaned_listings_export_path = os.path.abspath(
+    os.path.join(script_dir, clean_data_dir, "cleaned_listings.csv")
+)
+
+cleaned_neighbourhoods_export_path = os.path.abspath(
+    os.path.join(script_dir, clean_data_dir, "cleaned_neighbourhoods.csv")
+)
+
+# Exporting cleaned data to directory.
+df_listings_cleaned.to_csv(cleaned_listings_export_path, index=False)
+df_neighbourhoods_cleaned.to_csv(cleaned_neighbourhoods_export_path, index=False)
+
+
 # *TODO Create code to clean data dropping non-ASCII characters
 
 # # Define the function to check for English text
@@ -95,35 +128,3 @@ listings_clean.info()
 # listings_clean["host_name"] = listings_clean["host_name"].str.replace(
 #     r"[^\x00-\x7F]", "", regex=True
 # )
-
-# Replacing non-ASCII characters with blank spaces.
-listings_clean["name"] = listings_clean["name"].apply(
-    lambda x: " " if any(ord(char) > 127 for char in x) else x
-)
-listings_clean["host_name"] = listings_clean["host_name"].apply(
-    lambda x: " " if any(ord(char) > 127 for char in x) else x
-)
-
-df_listings_cleaned = listings_clean.copy()
-
-# Cleaning df_neighbourhoods
-neighbourhoods_clean = df_neighbourhoods.copy()
-df_neighbourhoods_cleaned = neighbourhoods_clean.drop(columns="neighbourhood_group")
-
-print(df_listings_cleaned)
-print(df_neighbourhoods_cleaned)
-
-# Creating directory path for export of cleaned data.
-clean_data_dir = os.path.join("..", "..", "data", "clean")
-
-cleaned_listings_export_path = os.path.abspath(
-    os.path.join(script_dir, clean_data_dir, "cleaned_listings.csv")
-)
-
-cleaned_neighbourhoods_export_path = os.path.abspath(
-    os.path.join(script_dir, clean_data_dir, "cleaned_neighbourhoods.csv")
-)
-
-# Exporting cleaned data to directory.
-df_listings_cleaned.to_csv(cleaned_listings_export_path, index=False)
-df_neighbourhoods_cleaned.to_csv(cleaned_neighbourhoods_export_path, index=False)

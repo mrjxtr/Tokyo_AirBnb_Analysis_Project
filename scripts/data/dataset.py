@@ -1,5 +1,5 @@
 import os
-import re
+# import re
 
 import pandas as pd
 
@@ -24,15 +24,6 @@ df2 = pd.read_csv(neighbourhoods_file_path)
 
 df_listings = pd.DataFrame(df1)
 df_neighbourhoods = pd.DataFrame(df2)
-# Print filepaths and DataFrames for verification
-
-print(df_listings.head())
-print(df_neighbourhoods.head())
-print(script_dir)
-print(listings_relative_path)
-print(neighbourhoods_relative_path)
-print(listings_file_path)
-print(neighbourhoods_file_path)
 
 df_listings.head()
 df_neighbourhoods.head()
@@ -43,11 +34,12 @@ df_listings.describe()
 
 # Overview of df_neighbourhoods
 df_neighbourhoods.info()
-df_neighbourhoods.describe()
 
 # Cleaning df_listings
 listings_clean = df_listings.copy()
+
 print(listings_clean.columns)
+
 listings_clean.columns = listings_clean.columns.str.strip().str.lower()
 listings_clean = (
     listings_clean.drop(
@@ -66,12 +58,11 @@ listings_clean = (
     .drop_duplicates()
     .dropna()
 )
-print(listings_clean)
 listings_clean.head()
 listings_clean.info()
-print(listings_clean.columns)
 
 # *TODO Create code to clean data dropping non-ASCII characters
+
 # # Define the function to check for English text
 # def is_english(text):
 #     # Regex pattern for English letters, numbers, and common English symbols
@@ -99,17 +90,30 @@ print(listings_clean.columns)
 # df_listings_cleaned.info()
 
 # *TODO Create code to clean data without dropping non-ASCII characters
-# df_listings_cleaned = listings_clean??
+
+# listings_clean["name"] = listings_clean["name"].str.replace(r"[^\x00-\x7F]", "", regex=True)
+# listings_clean["host_name"] = listings_clean["host_name"].str.replace(
+#     r"[^\x00-\x7F]", "", regex=True
+# )
+
+# Replacing non-ASCII characters with blank spaces.
+listings_clean["name"] = listings_clean["name"].apply(
+    lambda x: " " if any(ord(char) > 127 for char in x) else x
+)
+listings_clean["host_name"] = listings_clean["host_name"].apply(
+    lambda x: " " if any(ord(char) > 127 for char in x) else x
+)
+
+df_listings_cleaned = listings_clean.copy()
 
 # Cleaning df_neighbourhoods
 neighbourhoods_clean = df_neighbourhoods.copy()
 df_neighbourhoods_cleaned = neighbourhoods_clean.drop(columns="neighbourhood_group")
 
-
 print(df_listings_cleaned)
 print(df_neighbourhoods_cleaned)
 
-
+# Creating directory path for export of cleaned data.
 clean_data_dir = os.path.join("..", "..", "data", "clean")
 
 cleaned_listings_export_path = os.path.abspath(
@@ -120,5 +124,6 @@ cleaned_neighbourhoods_export_path = os.path.abspath(
     os.path.join(script_dir, clean_data_dir, "cleaned_neighbourhoods.csv")
 )
 
+# Exporting cleaned data to directory.
 df_listings_cleaned.to_csv(cleaned_listings_export_path, index=False)
 df_neighbourhoods_cleaned.to_csv(cleaned_neighbourhoods_export_path, index=False)

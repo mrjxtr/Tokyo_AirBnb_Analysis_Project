@@ -1,22 +1,11 @@
 import os
-# import re
-
 import pandas as pd
 
-# Get the directory of the current script
-# Define the relative path to the CSV file
-# Construct the full path to the CSV file
-script_dir = os.path.dirname(os.path.abspath(__file__))
+# *Better way to read file from root .\data\raw\
 
-listings_relative_path = os.path.join("..", "..", "data", "raw", "listings.csv")
-neighbourhoods_relative_path = os.path.join(
-    "..", "..", "data", "raw", "neighbourhoods.csv"
-)
-
-listings_file_path = os.path.abspath(os.path.join(script_dir, listings_relative_path))
-neighbourhoods_file_path = os.path.abspath(
-    os.path.join(script_dir, neighbourhoods_relative_path)
-)
+script_dir = os.path.dirname(__file__)
+listings_file_path = os.path.join(script_dir, "../../data/raw/listings.csv")
+neighbourhoods_file_path = os.path.join(script_dir, "../../data/raw/neighbourhoods.csv")
 
 # Read the CSV file into a DataFrame
 df1 = pd.read_csv(listings_file_path)
@@ -93,8 +82,28 @@ cleaned_neighbourhoods_export_path = os.path.abspath(
 df_listings_cleaned.to_csv(cleaned_listings_export_path, index=False)
 df_neighbourhoods_cleaned.to_csv(cleaned_neighbourhoods_export_path, index=False)
 
+#################################################################
+# * All the code below are less efficient than the above code.
+#################################################################
 
-# *TODO Create code to clean data dropping non-ASCII characters
+# import re (tried regex to clean data but found a better way)
+
+# # Get the directory of the current script
+# # Define the relative path to the CSV file
+# # Construct the full path to the CSV file
+# script_dir = os.path.dirname(os.path.abspath(__file__))
+
+# listings_relative_path = os.path.join("..", "..", "data", "raw", "listings.csv")
+# neighbourhoods_relative_path = os.path.join(
+#     "..", "..", "data", "raw", "neighbourhoods.csv"
+# )
+
+# listings_file_path = os.path.abspath(os.path.join(script_dir, listings_relative_path))
+# neighbourhoods_file_path = os.path.abspath(
+#     os.path.join(script_dir, neighbourhoods_relative_path)
+# )
+
+# Create code to clean data dropping non-ASCII characters
 
 # # Define the function to check for English text
 # def is_english(text):
@@ -122,7 +131,7 @@ df_neighbourhoods_cleaned.to_csv(cleaned_neighbourhoods_export_path, index=False
 # df_listings_cleaned
 # df_listings_cleaned.info()
 
-# *TODO Create code to clean data without dropping non-ASCII characters
+# Create code to clean data without dropping non-ASCII characters
 
 # listings_clean["name"] = listings_clean["name"].str.replace(r"[^\x00-\x7F]", "", regex=True)
 # listings_clean["host_name"] = listings_clean["host_name"].str.replace(

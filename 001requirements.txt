@@ -1,0 +1,15 @@
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+statsmodels
+openpyxl
+xlrd
+notebook
+jupyterlab
+jupytext
+nbconvert
+pandas-profiling
+SQLAlchemy
+plotly

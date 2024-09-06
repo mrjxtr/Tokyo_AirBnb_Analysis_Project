@@ -1,23 +1,14 @@
 import os
+
 import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
+import utility.plots_cfg  # noqa: F401
 
 # Load the dataset
 script_dir = os.path.dirname(__file__)
-data_path = os.path.join(script_dir, "../../data/clean/cleaned_listings.csv")
+data_path = os.path.join(script_dir, "../data/clean/cleaned_listings.csv")
 df = pd.read_csv(data_path)
-
-# Directory to save visualizations
-export_path = os.path.join(script_dir, "../../reports/figures/")
-
-
-def save_plot(fig, filename):
-    """Saves the given figure to a file."""
-    filepath = os.path.join(export_path, filename)
-    fig.savefig(filepath)
-    plt.close(fig)
-
 
 # *1. Competition by Neighbourhood (Side-by-side chart)
 # Calculate average price per neighbourhood
@@ -183,35 +174,71 @@ plt.tight_layout()
 
 plt.show()
 
-# List of figures and filenames
+
+from utility.save_plots import export_figs  # noqa: E402 (disable not ot top of file warning)
+
+
+export_dir = os.path.join(script_dir, "../reports/figures/")
 figures = [
-    (
-        fig1,
-        "competition_by_neighbourhood.png",
-    ),  # Competition by Neighbourhood (Side-by-side chart)
-    (
-        fig2,
-        "pricing_and_competition_correlation.png",
-    ),  # Pricing & Competition Correlation (Scatter plot)
-    (
-        fig3,
-        "average_pricing_by_neighbourhood.png",
-    ),  # AVG Pricing by Neighbourhood (Bar chart)
-    (
-        fig4,
-        "popular_property_types_by_neighbourhood.png",
-    ),  # Popular Property Types by Neighbourhood (Bar chart)
-    (
-        fig5,
-        "listings_per_host_histogram.png",
-    ),  # Host Analysis Based on Listing Volume (Histogram)
-    (fig6, "correlation_heatmap.png"),  # Correlation (Heatmap)
-    (fig7, "correlation_with_price.png"),  # Correlation Coefficient (Bar Chart)
+    (fig1, "competition_by_neighbourhood.png"),
+    (fig2, "pricing_and_competition_correlation.png"),
+    (fig3, "average_pricing_by_neighbourhood.png"),
+    (fig4, "popular_property_types_by_neighbourhood.png"),
+    (fig5, "listings_per_host_histogram.png"),
+    (fig6, "correlation_heatmap.png"),
+    (fig7, "correlation_with_price.png"),
 ]
 
-# Save all figures
-for fig, filename in figures:
-    save_plot(fig, filename)
+# for fig, filename in figures:
+#     export_figs(fig, filename, export_dir)
+
+for index, (fig, filename) in enumerate(figures, start=1):
+    export_figs(fig, filename, export_dir, index)
+
+# * ------------------------------------------------------
+# * sub-optimal way to save figures
+# * ------------------------------------------------------
+
+# # Directory to save visualizations
+# export_path = os.path.join(script_dir, "../../reports/figures/")
+
+
+# def save_plot(fig, filename):
+#     """Saves the given figure to a file."""
+#     filepath = os.path.join(export_path, filename)
+#     fig.savefig(filepath)
+#     plt.close(fig)
+
+
+# # List of figures and filenames
+# figures = [
+#     (
+#         fig1,
+#         "competition_by_neighbourhood.png",
+#     ),  # Competition by Neighbourhood (Side-by-side chart)
+#     (
+#         fig2,
+#         "pricing_and_competition_correlation.png",
+#     ),  # Pricing & Competition Correlation (Scatter plot)
+#     (
+#         fig3,
+#         "average_pricing_by_neighbourhood.png",
+#     ),  # AVG Pricing by Neighbourhood (Bar chart)
+#     (
+#         fig4,
+#         "popular_property_types_by_neighbourhood.png",
+#     ),  # Popular Property Types by Neighbourhood (Bar chart)
+#     (
+#         fig5,
+#         "listings_per_host_histogram.png",
+#     ),  # Host Analysis Based on Listing Volume (Histogram)
+#     (fig6, "correlation_heatmap.png"),  # Correlation (Heatmap)
+#     (fig7, "correlation_with_price.png"),  # Correlation Coefficient (Bar Chart)
+# ]
+
+# # Save all figures
+# for fig, filename in figures:
+#     save_plot(fig, filename)
 
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

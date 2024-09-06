@@ -1,11 +1,4 @@
-# def export_figs(fig, filename, export_dir):
-#     import os
-
-#     filepath = os.path.join(export_dir, filename)
-#     fig.savefig(filepath)
-
-
-def export_figs(fig, filename, export_dir, fig_number):
+def export_figs(export_dir, fig, fig_number, filename):
     import os
 
     formatted_number = f"fig{fig_number:03d}"

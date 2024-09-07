@@ -38,11 +38,11 @@ Other tools:
 
 ## Analysis Process
 
-**Step 1** - **Find relevant data** to create this analysis through publicly available open data sources.
-**Step 2** - **Process data** to ensure that it is ready Exploratory Data Analysis or EDA.
-**Step 3** - **Explore data** for patters or trends to answer questions related to the business task.
-**Step 4** - **Visualize data** that is discovered through EDA to gain better understanding of the data story.
-**Step 5** - **Present insights and recommendations** using a Tableau dashboard for dynamic filtering, by exporting figures and charts created during EDA, and creating a comprehensive report and documentation.
+- **Step 1** - **Find relevant data** to create this analysis through publicly available open data sources.
+- **Step 2** - **Process data** to ensure that it is ready Exploratory Data Analysis or EDA.
+- **Step 3** - **Explore data** for patters or trends to answer questions related to the business task.
+- **Step 4** - **Visualize data** that is discovered through EDA to gain better understanding of the data story.
+- **Step 5** - **Present insights and recommendations** using a Tableau dashboard for dynamic filtering, by exporting figures and charts created during EDA, and creating a comprehensive report and documentation.
 
 ### Step 1 - Find relevant data
 

@@ -2,11 +2,13 @@
 
 ## Project Summary <a name="ProjectSummary"></a>
 
-Welcome to my Tokyo AirBnb **Competition and Pricing Analysis**. This project aims to show a potential opportunities to start an AirBnb business in Tokyo, Japan. I will be looking at potential neighbourhoods in Tokyo where, by data driven decision making and insights, a potential real estate entrepreneur or company can start their AirBnb business.
+Welcome to my Tokyo AirBnb **Competition and Pricing Analysis**. This project identifies potential opportunities for starting an Airbnb business in Tokyo, Japan, by leveraging data-driven decision-making and insights. The analysis focuses on pinpointing the most lucrative neighborhoods for new Airbnb ventures, where competition is minimal, and demand is high.
+
+<br />
 
 <div align="center">
     <a href="reports/figures/Tokyo_Airbnb_Competition_and_Pricing.png">
-        <img src="reports/figures/Tokyo_Airbnb_Competition_and_Pricing.png" alt="Dashboard" width="400">
+        <img src="reports/figures/Tokyo_Airbnb_Competition_and_Pricing.png" alt="Dashboard" width="500">
     </a>
 </div>
 
@@ -27,13 +29,13 @@ Welcome to my Tokyo AirBnb **Competition and Pricing Analysis**. This project ai
 
 ### Questions to Answer (Business task) <a name="QuestionstoAnswer"></a>
 
-1. Which neighbourhoods in Tokyo has the highest average rates for their rooms. Give at least the top 10.
+1. Which neighborhoods in Tokyo have the highest average rates for their rooms?
 
-2. Which of these top 10 neighbourhoods in Tokyo has the least amount of competitors.
+2. Which of these top 10 neighborhoods have the least amount of competition?
 
-3. Which of these top 10 neighbourhoods has the most amount of competition in terms of listings.
+3. Which of these top 10 neighborhoods have the most competition in terms of listings?
 
-4. Which room types are in demand for this neighbourhoods.
+Optional additional question: Which room types are in demand in these neighborhoods?
 
 ### Tools used (Tech Stack) <a name="Toolsused"></a>
 
@@ -241,12 +243,52 @@ Using **Tableau** to create a dynamic dashboard to gain better understanding of 
 
 **Key insights:**
 
-- writing insights and recommendations.
-- writing insights and recommendations.
-- writing insights and recommendations.
+- **Highest Average Room Rates:**
+  - **Top 5 neighborhoods** with the highest average room rates are **Shibuya Ku (¥27,029)**, **Chuo Ku (¥26,597)**, **Minato Ku (¥25,748)**, **Taito Ku (¥24,928)**, and **Ome Shi (¥24,858)**.
+  - These neighborhoods have the highest overall average rate across the top 10 neighborhoods which is is ¥24,173, indicating a healthy market for premium-priced listings.
+
+<br />
+
+- **Least Competitive Neighborhoods:**
+  - **Ome Shi** and **Meguro Ku** have the fewest listings (21 and 49, respectively) with only 15 and 49 hosts, making them potentially lucrative areas for new entrants.
+  - These neighborhoods have fewer competitors while still maintaining relatively high average prices, suggesting potential for growth with less risk.
+
+<br />
+
+- **Most Competitive Neighborhoods:**
+  - **Shinjuku Ku** and **Taito Ku** lead in competition with the highest number of listings (2,897 and 1,711, respectively).
+  - **Shibuya Ku** has fewer listings (977) but maintains a high average rate, suggesting it is a sought-after location with strong demand.
+
+<br />
+
+- **Least Competitive Neighborhoods (Top 5)**
+  - **Chuo Ku** so far leads in all categories being the second to the highest in terms of average price (¥26,597) but having relatively low competition with only 49 competitor host and 232 listings.
+  - Other less competitive neighborhoods include **Ome Shi** and **Meguro Ku**, with minimal listings (21 and 49, respectively) and hosts (15 and 49), presenting further opportunities for market penetration with less competitive pressure.
+  
+<br />
+
+>- **Demand for Room Types:**
+>    - ... TBD ... Higher prices in neighborhoods like **Shibuya Ku** and **Chuo Ku** could indicate a preference for premium or entire home listings.
 
 ### Recommendations <a name="Recommendations"></a>
 
-- writing insights and recommendations.
-- writing insights and recommendations.
-- writing insights and recommendations.
+- **Capitalize on Chuo Ku's High Price and Low Competition:** Focus on entering the market in **Chuo Ku**, where the potential for high earnings meets relatively low competition. Developing properties with unique offerings or upscale amenities could attract premium guests and maximize profits.
+
+<br />
+
+- **Capitalize on High-Rate Neighborhoods:** Maintain a presence in premium areas like **Shibuya Ku** and **Minato Ku**. Consider investing in unique or high-end properties that cater to international tourists and business travelers, given their willingness to pay above-average rates.
+
+<br />
+
+- **Differentiate in Competitive Markets:** In more saturated areas like **Taito Ku**, **Shibuya Ku**, and **Minato Ku**, stand out by offering specialized stays (e.g., themed properties or local partnerships) that cater to niche markets or unique guest experiences.
+<br />
+
+- **Expand in Low-Competition Areas:** Target other less competitive neighborhoods like **Ome Shi** for new listings, leveraging the neighborhood's untapped potential while maintaining competitive pricing.
+
+<br />
+
+- **Explore Room Type Demand:** Further analysis is needed to understand room type preferences in these neighborhoods. Focus on offering a mix of room types (e.g., entire homes, private rooms) tailored to the target audience's needs in the selected neighborhoods.
+
+### Conclusion
+
+By strategically entering low-competition, high-potential neighborhoods such as **Chuo Ku** and effectively differentiating offerings in more competitive areas, Airbnb hosts can optimize profitability and gain a stronger foothold in Tokyo's dynamic market. Further understanding of room type demand will refine these strategies, ensuring a successful and sustainable Airbnb business.

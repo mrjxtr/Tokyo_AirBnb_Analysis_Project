@@ -452,11 +452,11 @@ print("Figures exported to ../reports/figures/")
 
 **Charts generated using Matplotlib and Seaborn**
 
-Figure 1 - Competition by Neighbourhood
+Figure 1 - Competition by Neighbourhood <a name="fig1"></a>
 
 <div align="center">
     <a href="reports/figures/fig_001_competition_by_neighbourhood.png">
-        <img src="reports/figures/fig_001_competition_by_neighbourhood.png" alt="fig_001" width="700">
+        <img src="reports/figures/fig_001_competition_by_neighbourhood.png" alt="fig_001" width="650">
     </a>
 </div>
 
@@ -480,11 +480,11 @@ Figure 1 - Competition by Neighbourhood
 
 <br />
 
-Figure 2 - Pricing and Competition Correlation
+Figure 2 - Pricing and Competition Correlation <a name="fig2"></a>
 
 <div align="center">
     <a href="reports/figures/fig_001_competition_by_neighbourhood.png">
-        <img src="reports/figures/fig_002_pricing_and_competition_correlation.png" alt="fig_002" width="700">
+        <img src="reports/figures/fig_002_pricing_and_competition_correlation.png" alt="fig_002" width="650">
     </a>
 </div>
 
@@ -500,11 +500,11 @@ Figure 2 - Pricing and Competition Correlation
 
 <br />
 
-Figure 3 - Average Pricing by Neighbourhood
+Figure 3 - Average Pricing by Neighbourhood <a name="fig3"></a>
 
 <div align="center">
     <a href="reports/figures/fig_001_competition_by_neighbourhood.png">
-        <img src="reports/figures/fig_003_average_pricing_by_neighbourhood.png" alt="fig_003" width="700">
+        <img src="reports/figures/fig_003_average_pricing_by_neighbourhood.png" alt="fig_003" width="650">
     </a>
 </div>
 
@@ -524,7 +524,7 @@ Figure 4 - Popular Property Types by Neighbourhood <a name="fig4"></a>
 
 <div align="center">
     <a href="reports/figures/fig_001_competition_by_neighbourhood.png">
-        <img src="reports/figures/fig_004_popular_property_types_by_neighbourhood.png" alt="fig_004" width="700">
+        <img src="reports/figures/fig_004_popular_property_types_by_neighbourhood.png" alt="fig_004" width="650">
     </a>
 </div>
 
@@ -534,7 +534,7 @@ Figure 4 - Popular Property Types by Neighbourhood <a name="fig4"></a>
 
 - **Room Types Popularity:**
   - **Entire home/apartment** room types are the most popular across neighborhoods followed by **Private room**. The gap between **Entire home/apartment** and **Private room** room types is relatively large specially in the neighborhoods where the number of listings are high.
-  -Higher average prices in these neighborhoods coupled with data that shows higher listings **Entire home/apartment** and **Private room** indicates a strong demand for more premium room types.
+  - Higher average prices in these neighborhoods coupled with data that shows higher listings **Entire home/apartment** and **Private room** indicates a strong demand for more premium room types.
 
 </details>
 

@@ -4,11 +4,14 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
 import utility.plots_cfg  # noqa: F401
+from utility.save_plots import export_figs
+
 
 # Load the dataset
 script_dir = os.path.dirname(__file__)
 data_path = os.path.join(script_dir, "../data/clean/cleaned_listings.csv")
 df = pd.read_csv(data_path)
+
 
 # *1. Competition by Neighbourhood (Side-by-side chart)
 # Calculate average price per neighbourhood
@@ -175,9 +178,7 @@ plt.tight_layout()
 plt.show()
 
 
-from utility.save_plots import export_figs  # noqa: E402 (disable not ot top of file warning)
-
-
+script_dir = os.path.dirname(__file__)
 export_dir = os.path.join(script_dir, "../reports/figures/")
 figures = [
     (fig1, "competition_by_neighbourhood.png"),

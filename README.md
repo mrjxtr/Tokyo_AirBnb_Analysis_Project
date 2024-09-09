@@ -241,7 +241,7 @@ print("\nEND OF EXPLORATORY DATA ANALYSIS!")
 
 In this step, I supported my exploratory data analysis with quick data visualization using matplotlib and seaborn to plot the data giving me a better visual understand of the data story.
 
->🔎Info: I conducted the data visualization using the `Jupyter Interactive Window` feature in VSCode. Thus, all of the output from this script is generated in the jupyter notebook [jl-data-exploration-v1.0.ipynb](notebooks/jl-data-viz-v1.0.ipynb). Click the link to view the jupyter notebook with all the EDA outputs.
+>🔎Info: I conducted the data visualization using the `Jupyter Interactive Window` feature in VSCode. Thus, all of the output from this script is generated in the jupyter notebook [jl-data-visualization-v1.0.ipynb](notebooks/jl-data-visualization-v1.0.ipynb). Click the link to view the jupyter notebook with all the EDA outputs.
 
 <details>
 
@@ -254,11 +254,14 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
 import utility.plots_cfg  # noqa: F401
+from utility.save_plots import export_figs
+
 
 # Load the dataset
 script_dir = os.path.dirname(__file__)
 data_path = os.path.join(script_dir, "../data/clean/cleaned_listings.csv")
 df = pd.read_csv(data_path)
+
 
 # *1. Competition by Neighbourhood (Side-by-side chart)
 # Calculate average price per neighbourhood
@@ -425,9 +428,7 @@ plt.tight_layout()
 plt.show()
 
 
-from utility.save_plots import export_figs  # noqa: E402 (disable not ot top of file warning)
-
-
+script_dir = os.path.dirname(__file__)
 export_dir = os.path.join(script_dir, "../reports/figures/")
 figures = [
     (fig1, "competition_by_neighbourhood.png"),
@@ -551,6 +552,8 @@ Utilized **Tableau** to combine all the generated data visualizations and insigh
 >💡Tip: Once you are in the Tableau Public dashboard, try clicking on the bards in the chart and zooming into the map to see data for specific neighborhoods.
 
 [![Dashboard](reports/figures/Tokyo_Airbnb_Competition_and_Pricing.png)](https://public.tableau.com/views/Book3_17249856024470/Dashboard2?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+
+As the original goal of the analysis was to determine competition and pricing in Tokyo, the dashboard was created for that main purpose in mind to providing a comprehensive view of the data.
 
 ## Step 5 - Insights and Recommendations 🧠 <a name="inightsandrecommendations"></a>
 

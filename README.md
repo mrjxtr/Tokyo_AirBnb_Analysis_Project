@@ -39,7 +39,7 @@ Welcome to my Tokyo AirBnb **Competition and Pricing Analysis**. This project id
 
 4. Which room types are most popular in these top 10 neighborhoods?
 
-5. Which neighborhoods would you recommend to be the best for Airbnb startups.
+5. Which neighborhoods would you recommend to be the best for Airbnb startups?
 
 ### Tools used (Tech Stack) 🛠 <a name="Toolsused"></a>
 
@@ -60,7 +60,7 @@ Other tools:
 ### Analysis Process 🔄 <a name="AnalysisProcess"></a>
 
 - **Step 1** - **Gather relevant data** to create this analysis through publicly available open data sources.
-- **Step 2** - **Process data** to ensure that it is ready Exploratory Data Analysis or EDA (Exploratory Data Analysis).
+- **Step 2** - **Process data** to ensure that it is ready for Exploratory Data Analysis or EDA (Exploratory Data Analysis).
 - **Step 3** - **Explore data** to identify patters and trends from the data that answer questions related to the business task.
   - **Step 3.5** - **Visualize data** to gain a visual representation and better understanding of the data story. This is the second half of the EDA process.
 - **Step 4** - **Create a dashboard** to combine all the generated data visualizations and insights from the EDA process.
@@ -70,11 +70,11 @@ Other tools:
 
 The [raw data](data/raw/listings.csv) was taken from [Inside AirBnb](https://insideairbnb.com/get-the-data/), an official AirBnb open data source that has AirBnb data from dozens of cities and countries around the world.
 
-From all of the cities and countries listed, I navigated to Tokyo, Japan and extracted the listings.csv file since it is the best option for this analysis.
+From all of the cities and countries listed, I navigated to Tokyo, Japan, and extracted the listings.csv file since it is the best option for this analysis.
 
 ## Step 2 - Process data 🔃 <a name="Processdata"></a>
 
-In this step of the process, the [clean data](/data/clean/cleaned_listings.csv) is created. This is the data that will be used for data exploration, visualization and analysis.
+In this step of the process, the [clean data](/data/clean/cleaned_listings.csv) is created. This is the data that will be used for data exploration, visualization, and analysis.
 
 The clean data is created using the [dataset-v1.0.py](scripts/data/dataset-v1.0.py) script shown below.
 
@@ -239,7 +239,7 @@ print("\nEND OF EXPLORATORY DATA ANALYSIS!")
 
 ### Step 3.5 - Visualize data 📈 <a name="Visualizedata"></a>
 
-In this step, I supported my exploratory data analysis with quick data visualization using matplotlib and seaborn to plot the data giving me a better visual understand of the data story.
+In this step, I supported my exploratory data analysis with quick data visualization using matplotlib and seaborn to plot the data giving me a better visual understanding of the data story.
 
 >🔎Info: I conducted the data visualization using the `Jupyter Interactive Window` feature in VSCode. Thus, all of the output from this script is generated in the jupyter notebook [jl-data-visualization-v1.0.ipynb](notebooks/jl-data-visualization-v1.0.ipynb). Click the link to view the jupyter notebook with all the EDA outputs.
 
@@ -495,7 +495,7 @@ Figure 2 - Pricing and Competition Correlation <a name="fig2"></a>
 
 - **Prince and Competition Correlation:**
   - A relatively **flat trend line** in this correlation chart indicates that there is **little to no correlation** between average prices per neighbourhood and the number of listings per neighbourhood across the top 10 neighbourhoods.
-  - This means **higher competition does not mean lower prices** and **higher prices does not mean lower competition**.
+  - This means **higher competition does not mean lower prices** and **higher prices do not mean lower competition**.
 
 </details>
 
@@ -534,7 +534,7 @@ Figure 4 - Popular Property Types by Neighbourhood <a name="fig4"></a>
 <summary><b>👀 see insights</b></summary>
 
 - **Room Types Popularity:**
-  - **Entire home/apartment** room types are the most popular across neighborhoods followed by **Private room**. The gap between **Entire home/apartment** and **Private room** room types is relatively large specially in the neighborhoods where the number of listings are high.
+  - **Entire home/apartment** room types are the most popular across neighborhoods followed by **Private room**. The gap between **Entire home/apartment** and **Private room** room types is relatively large, especially in the neighborhoods where the number of listings is high.
   - Higher average prices in these neighborhoods coupled with data that shows higher listings **Entire home/apartment** and **Private room** indicates a strong demand for more premium room types.
 
 </details>
@@ -553,7 +553,7 @@ Utilized **Tableau** to combine all the generated data visualizations and insigh
 
 [![Dashboard](reports/figures/Tokyo_Airbnb_Competition_and_Pricing.png)](https://public.tableau.com/views/Book3_17249856024470/Dashboard2?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
-As the original goal of the analysis was to determine competition and pricing in Tokyo, the dashboard was created for that main purpose in mind to providing a comprehensive view of the data.
+As the original goal of the analysis was to determine competition and pricing in Tokyo, the dashboard was created with that main purpose in mind, to provide a comprehensive view of the data.
 
 ## Step 5 - Insights and Recommendations 🧠 <a name="inightsandrecommendations"></a>
 
@@ -563,7 +563,7 @@ As the original goal of the analysis was to determine competition and pricing in
 
 - **Highest Average Room Rates:** *see [Figure 3](#fig3)*
   - **Top 5 neighborhoods** with the highest average room rates are **Shibuya Ku (¥27,029)**, **Chuo Ku (¥26,597)**, **Minato Ku (¥25,748)**, **Taito Ku (¥24,928)**, and **Ome Shi (¥24,858)**.
-  - These neighborhoods have the highest overall average rate across the top 10 neighborhoods which is is ¥24,173, indicating a healthy market for premium-priced listings.
+  - These neighborhoods have the highest overall average rate across the top 10 neighborhoods which is ¥24,173, indicating a healthy market for premium-priced listings.
 
 <br />
 
@@ -587,12 +587,12 @@ As the original goal of the analysis was to determine competition and pricing in
 
 - **Prince and Competition Correlation:** *see [Figure 2](#fig2)*
   - A relatively **flat trend line** in this correlation chart indicates that there is **little to no correlation** between average prices per neighbourhood and the number of listings per neighbourhood across the top 10 neighbourhoods.
-  - This means **higher competition does not mean lower prices** and **higher prices does not mean lower competition**.
+  - This means **higher competition does not mean lower prices** and **higher prices do not mean lower competition**.
 
 <br />
 
 - **Room Types Popularity:** *see [Figure 4](#fig4)*
-  - **Entire home/apartment** room types are the most popular across neighborhoods followed by **Private room**. The gap between **Entire home/apartment** and **Private room** room types is relatively large specially in the neighborhoods where the number of listings are high.
+  - **Entire home/apartment** room types are the most popular across neighborhoods followed by **Private room**. The gap between **Entire home/apartment** and **Private room** room types is relatively large, especially in the neighborhoods where the number of listings is high.
   -Higher average prices in these neighborhoods coupled with data that shows higher listings **Entire home/apartment** and **Private room** indicates a strong demand for more premium room types.
 
 <br />

@@ -31,15 +31,15 @@ Welcome to my Tokyo AirBnb **Competition and Pricing Analysis**. This project id
 
 ### Questions to Answer (Business task) ✅ <a name="QuestionstoAnswer"></a>
 
-1. Which are the top 5 and top 10 neighborhoods in Tokyo have the highest average rates for their rooms?
+1. Which of the top 5 and top 10 neighborhoods in Tokyo have the highest average rates for their rooms?
 
 2. Which of these top 10 neighborhoods have the least amount of competition?
 
 3. Which of these top 10 neighborhoods have the most competition in terms of listings?
 
-4. Which room types are most popular in these top 10 neighborhoods?
+4. Which neighborhood(s) would you recommend for Airbnb startups?
 
-5. Which neighborhoods would you recommend to be the best for Airbnb startups?
+5. What room types are most popular in these top 10 neighborhoods?
 
 ### Tools used (Tech Stack) 🛠 <a name="Toolsused"></a>
 
@@ -61,7 +61,7 @@ Other tools:
 
 - **Step 1** - **Gather relevant data** to create this analysis through publicly available open data sources.
 - **Step 2** - **Process data** to ensure that it is ready for Exploratory Data Analysis or EDA (Exploratory Data Analysis).
-- **Step 3** - **Explore data** to identify patters and trends from the data that answer questions related to the business task.
+- **Step 3** - **Explore data** to identify patterns and trends from the data that answer questions related to the business task.
   - **Step 3.5** - **Visualize data** to gain a visual representation and better understanding of the data story. This is the second half of the EDA process.
 - **Step 4** - **Create a dashboard** to combine all the generated data visualizations and insights from the EDA process.
 - **Step 5** - Present **insights and recommendations** by exporting figures and charts created during EDA to create a comprehensive report and documentation and by creating a dynamic Tableau dashboard.
@@ -466,7 +466,7 @@ Figure 1 - Competition by Neighbourhood <a name="fig1"></a>
 <summary><b>👀 see insights</b></summary>
 
 - **Least Competitive Neighborhoods: (Top 5)**
-  - **Chuo Ku** so far leads in all categories being the second to the highest in terms of average price (¥26,597) but having relatively low competition with only 49 competitor host and 232 listings.
+  - **Chuo Ku** so far leads in all categories being the second to the highest in terms of average price (¥26,597) but having relatively low competition with only 49 competitor hosts and 232 listings.
   - Other less competitive neighborhoods include **Ome Shi** and **Meguro Ku**, with minimal listings (21 and 49, respectively) and hosts (15 and 49), presenting further opportunities for market penetration with less competitive pressure.
 
 - **Least Competitive Neighborhoods:**
@@ -515,7 +515,7 @@ Figure 3 - Average Pricing by Neighbourhood <a name="fig3"></a>
 
 - **Highest Average Room Rates:**
   - **Top 5 neighborhoods** with the highest average room rates are **Shibuya Ku (¥27,029)**, **Chuo Ku (¥26,597)**, **Minato Ku (¥25,748)**, **Taito Ku (¥24,928)**, and **Ome Shi (¥24,858)**.
-  - These neighborhoods have the highest overall average rate across the top 10 neighborhoods which is is ¥24,173, indicating a healthy market for premium-priced listings.
+  - These neighborhoods have the highest overall average rate across the top 10 neighborhoods which is ¥24,173, indicating a healthy market for premium-priced listings.
 
 </details>
 
@@ -568,7 +568,7 @@ As the original goal of the analysis was to determine competition and pricing in
 <br />
 
 - **Least Competitive Neighborhoods: (Top 5)** *see [Figure 1](#fig1)*
-  - **Chuo Ku** so far leads in all categories being the second to the highest in terms of average price (¥26,597) but having relatively low competition with only 49 competitor host and 232 listings.
+  - **Chuo Ku** so far leads in all categories being the second to the highest in terms of average price (¥26,597) but having relatively low competition with only 49 competitor hosts and 232 listings.
   - Other less competitive neighborhoods include **Ome Shi** and **Meguro Ku**, with minimal listings (21 and 49, respectively) and hosts (15 and 49), presenting further opportunities for market penetration with less competitive pressure.
   
 <br />
